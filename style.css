@@ -371,56 +371,6 @@ html{
 
 /* Product Container */
 
-/*.row .column {
-    float: left;
-    width: 30%;
-    padding: 0 20px;
-    margin-top: 30px;
-    margin: 10px;
-}
-
-.row{
-    margin: 0 -5px;
-}
-
-.row::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.column .card{
-    box-shadow: 0 3px 20px rgba(0,0,0,.35);
-    padding: 16px;
-    text-align: center;
-    background-color: #fff;
-}
-
-.column .card img{
-    padding: 3rem 5rem;
-    height: 30rem;
-    display: block;
-    transition: 0.5s;
-}
-
-.column img:hover{
-    transform: scale(1.1);
-}
-
-.column .card p{
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.column .card h1{
-    font-size: 22px;
-    font-weight: 800;
-}
-
-.price{
-    color: #ff7200;
-}*/
-
 .all-products{
     display: flex;
     align-items: center;
