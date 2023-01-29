@@ -336,7 +336,7 @@ html{
     width: 260px;
     height: 42px;
     border: 2px solid #ff7200;
-    transform:  translate(-300%, 295%);
+    transform:  translate(-295%, 295%);
     padding: 8px 10px;
     border-radius: 8px;
 }
