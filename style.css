@@ -380,6 +380,7 @@ html{
 
 .product{
     overflow: hidden;
+    cursor: pointer;
     background: #fff;
     color: #000;
     text-align: center;
@@ -414,6 +415,7 @@ html{
 .product .product-price{
     color: #ff7300;
     font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .product img{
@@ -446,11 +448,11 @@ html{
     font-size: 10px;
     letter-spacing: 0.1em;
     position: absolute;
-    width: 110px;
+    width: 100px;
     height: 30px;
     background: rgb(180, 180, 180);
     color: #392cac;
-    transform: rotate(0) translateY(0px) translateX(-64px);
+    transform: rotate(0) translateY(10px) translateX(-69px);
     border-radius: 0 0 100px 0;
     display: flex;
     align-items: center;
@@ -487,11 +489,11 @@ html{
     font-size: 10px;
     letter-spacing: 0.1em;
     position: absolute;
-    width: 110px;
+    width: 100px;
     height: 30px;
     background: #ff7200;
     color: #fff;
-    transform: rotate(0) translateY(0px) translateX(-64px);
+    transform: rotate(0) translateY(10px) translateX(-69px);
     border-radius: 0 0 100px 0;
     display: flex;
     align-items: center;
