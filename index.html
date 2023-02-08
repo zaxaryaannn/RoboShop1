@@ -8,48 +8,64 @@
     <title>RoboShop</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>    
 <body>
     <header class="header">
         <div class="logo">
             <a href="">Robo Shop</a>
         </div> 
+        <div class="icons">
+            <div class="icon facebook">
+                <div class="tooltip">Facebook</div>
+                <span><i class="fab fa-facebook-f"></i></span>
+            </div>
+            <div class="icon instagram">
+                <div class="tooltip">Instagram</div>
+                <span><i class="fab fa-instagram"></i></span>
+            </div>
+            <div class="icon envelope">
+                <div class="tooltip">gMail</div>
+                <span><i class="fa-regular fa-envelope"></i></span>
+            </div>
+            <div class="icon phone">
+                <div class="tooltip">093000000</div>
+                <span><i class="fa-solid fa-phone"></i></span>
+            </div>
+        </div>
     </header>
 
-    <div class="back"></div>
+    <div class="back">
+        <div class="intro">
+            <a href="#products" title="" class="scroll-btn">
+                <img src="Image/scroll-btn.jpg" alt="">
+                <h2>տեսնել ապրանքները</h2>
+            </a>
+        </div>
+    </div>
   
     <div class="content" data-aos="fade-right">
         <h1>Բարի Գալուստ<br><span> Ռոբոտաշինության աշխարհ</span></h1>
         <p>Կայքում կարող եք գտնել և գնել ձեզ անհրաժեշտ ապրանքները
             <br> ցանկացած ռոբոտ կամ սարք պատրաստելու համար
-            <br>մաղթում ենք ձեզ բարի գնումներ</p>
-        <button class="button-btn">Գնել</button>
-        
+            <br>մաղթում ենք ձեզ բարի գնումներ
+        </p>
+        <button onclick="doSomething()">Գնել</button>
+        <p id="test"></p>
     </div>
 
-    <div class="intro">
-        <a href="#products" title="" class="scroll-btn">
-            <img src="Image/scroll-btn.jpg" alt="">
-            <h2>տեսնել ապրանքները</h2>
-        </a>
-    </div>
-
-    <section class="products" id="products">
+    <section class="products" id="products"> 
         <h1 class="heading"> Ռոբոտաշինական <span>ապրանքներ</span></h1>
 
         <div class="container">
             <div class="select-box">
                 <div class="search">
-                    <table class="search-box">
-                        <tr>
-                            <td>
-                                <input type="text" placeholder="Փնտրել..." />
-                            </td>
-                            <td>
-                                <a href="#"><i class="fas fa-search"></i></a>
-                            </td>
-                        </tr>
-                    </table>
+                    <form>
+                        <div class="search-box">
+                            <input type="text" placeholder="Որոնել․․․">
+                            <button type="submit">Փնտրել</button>
+                        </div> 
+                    </form>
                 </div>
 
                 <div class="options-container">
@@ -189,24 +205,22 @@
     <section class="footer">
         <h3>Robo Shop</h3>
         <p>About us:</p>
-        <div class="button">
-            <div class="icon">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <div class="wrapper">
+            <div class="icon facebook">
+                <div class="tooltip">Facebook</div>
+                <span><i class="fab fa-facebook-f"></i></span>
             </div>
-        </div>
-        <div class="button">
-            <div class="icon">
-                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            <div class="icon instagram">
+                <div class="tooltip">Instagram</div>
+                <span><i class="fab fa-instagram"></i></span>
             </div>
-        </div>
-        <div class="button">
-            <div class="icon">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <div class="icon envelope">
+                <div class="tooltip">gMail</div>
+                <span><i class="fa-regular fa-envelope"></i></span>
             </div>
-        </div>
-        <div class="button">
-            <div class="icon">
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <div class="icon phone">
+                <div class="tooltip">+3740000000</div>
+                <span><i class="fa-solid fa-phone"></i></span>
             </div>
         </div>
 
@@ -215,10 +229,9 @@
         </div>
     </section>
     
-    
-
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="index.js"></script> 
+
     <script>
         AOS.init({
           offset: 200,

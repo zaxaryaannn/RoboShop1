@@ -1,13 +1,8 @@
-button_btn = document.querySelector(".button-btn")
-
-button_btn.onclick = function() {
-    this.innerHTML = "<div class='loader'></div>";
-    setTimeout(() => {
-        this.innerHTML = "Error :)";
-        this.style = "background: #ff7200; color: #fff; pointer-events: none";
-    }, 5000);
+function doSomething(){
+  document.getElementById("test").innerHTML = "Գնումներ կարող եք կատարել զանգի կամ հաղորդագրության միջոցով:Կայքի Ներքևի հատվածում կարող եք  գտնել ձեզ անհրաժեշտ ապրանքները և դրանց գները";
 }
 
+// Scroll Down
 
 const links = document.querySelectorAll('.scroll-btn');
 
@@ -49,8 +44,8 @@ optionsList.forEach(o => {
 // Back and Next
 
 const element = document.querySelector(".pagination ul");
-let totalPages = 25;
-let page = 10;
+let totalPages = 10;
+let page = 1;
 
 
 element.innerHTML = createPagination(totalPages, page);
