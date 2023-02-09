@@ -212,41 +212,72 @@ html{
 
 /* Scroll Down */
 
-.intro{
-    display: flex;
-    height: 30px;
-    color: #fff;
-    margin-top: 450px;
-    align-items: center;
-    mix-blend-mode: lighten;
+.back section {
+    height: 100vh;
+    position: relative;
 }
 
-.scroll-btn{
-    animation: bounce .9s;
-    animation-duration: alternate;
-    animation-timing-function: cubic-bezier(.5, .05, 1, .5);
-    animation-iteration-count: infinite;
+a#scroll-btn {
+    position: absolute;
+    height: 7em;
+    width: 4em;
+    border: 0.2em solid #ffffff;
+    margin: auto;
+    left: -20px;
+    right: 0;
+    bottom: 6.25em;
+    border-radius: 3em;
 }
 
-.intro .scroll-btn img{
-    width: 100px;
-    height: 100px;
-    transform: translate(25%, 0%);
+a#scroll-btn:before {
+    position: absolute;
+    content: "";
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 10px;
+    height: 1em;
+    width: 1em;
+    background-color: #ffffff;
+    border-radius: 50%;   
+    animation: move-down 2s infinite;
 }
 
-.intro .scroll-btn h2{
-    font-size: 13px;
-    color: #fff;
-    transform: translate(0%, 0%);
-}
-
-@keyframes bounce {
-    from{
-        transform:  translate(0, 10px);
-        transition: .5s;
+@keyframes move-down {
+    80% {
+      opacity: 0.5;
     }
-    to {
-        transform: translate(0, 20px);
+    100% {
+      transform: translateY(2.7em);
+      opacity: 0;
+    }
+}
+
+a#scroll-btn:after {
+    position: absolute;
+    content: "Տեսնել Ապրանքները";
+    width: 12em;
+    display: block;
+    text-align: center;
+    left: -3.8em;
+    bottom: -3.9em;
+    font-size: 1em;
+    color: #ffffff;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1000px) {
+    a#scroll-btn {
+      font-size: 9px;
+      margin-left: 2px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    a#scroll-btn {
+      font-size: 7px;
+      margin-left: 6px;
     }
 }
 

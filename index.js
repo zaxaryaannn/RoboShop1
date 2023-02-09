@@ -2,26 +2,6 @@ function doSomething(){
   document.getElementById("test").innerHTML = "Գնումներ կարող եք կատարել զանգի կամ հաղորդագրության միջոցով:Կայքի Ներքևի հատվածում կարող եք  գտնել ձեզ անհրաժեշտ ապրանքները և դրանց գները";
 }
 
-// Scroll Down
-
-const links = document.querySelectorAll('.scroll-btn');
-
-for (const link of links) {
-    link.addEventListener('click', clickHandlear);
-}
-
-function clickHandlear(e) {
-    e.preventDefault();
-    const href = this.getAttribute('href');
-    const offsetTop = document.querySelector(href).
-    offsetTop;
-
-    scroll({
-        top: offsetTop,
-        behavior: 'smooth'
-    });
-}
-
 // Type
 
 const selected = document.querySelector(".selected");
