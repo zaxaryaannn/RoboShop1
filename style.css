@@ -21,11 +21,11 @@ html{
 }
 
 .header{
-    background: #0f018b;
+    background: #0A0064;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 7%;
+    padding: 1rem 5%;
     border-bottom: #000;
     position: fixed;
     top: 0;
@@ -35,10 +35,9 @@ html{
     border: 1px solid #000;
 }
 
-.header .logo a{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-    color: #fff;
+.header .logo img{
+    width: 170px;
+    height: 45px;
 }
 
 
@@ -275,11 +274,23 @@ a#scroll-btn:after {
 }
 
 @media screen and (max-width: 500px) {
+    .header .logo img{
+        width: 130px;
+        height: 35px;
+    }
     a#scroll-btn {
       font-size: 7px;
       margin-left: 6px;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .header .logo img{
+        width: 100px;
+        height: 25px;
+    }
+}
+
 
 .products{
     background: url(Image/background2.jpg);
@@ -840,7 +851,7 @@ a#scroll-btn:after {
     .content h1{
         color: #fff;
         font-size: 2.5rem;
-        margin-top: -70px;
+        margin-top: -35px;
     }
     
     .content p{
@@ -984,6 +995,15 @@ a#scroll-btn:after {
 }
 
 @media (max-width:420px){
+    .icons .icon span{
+        height: 30px;
+        width: 30px;
+    }
+    
+    .icons .icon span i{
+        font-size: 12px;
+        line-height: 30px;
+    }
     .pagination ul li{
         font-size: 16px;
     }
