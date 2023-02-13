@@ -800,7 +800,7 @@ a#scroll-btn:after {
         font-size: 10px;
     }
     .back section {
-        height: 75vh;
+        height: 80vh;
         position: relative;
     }
 }
