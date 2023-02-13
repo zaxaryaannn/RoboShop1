@@ -1,0 +1,284 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 51.5%;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+.header{
+    background: #0A0064;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    border-bottom: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border: 1px solid #000;
+}
+
+.header .logo img{
+    width: 150px;
+    height: 42px;
+}
+
+
+.icons{
+    display: inline-flex;
+    margin-top: -5px;
+    margin-right: 17px;
+}
+
+.icons .icon{
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.icons .icon span{
+    position: relative;
+    height: 32px;
+    width: 32px;
+    display: block;
+    background: #fff;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icons .icon span i{
+    font-size: 12px;
+    line-height: 32px;
+}
+
+.icons .icon:hover span{
+    color: #fff;
+}
+
+.icons .icon .tooltip{
+    position: absolute;
+    top: 0px;
+    background: #fff;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.icons .icon:hover .tooltip{
+    top: 60px;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.icons .icon .tooltip::before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.icons .icon:hover span,
+.icons .icon:hover .tooltip{
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.icons .facebook:hover span,
+.icons .facebook:hover .tooltip,
+.icons .facebook:hover .tooltip::before{
+    background: #1900ff;
+}
+
+.icons .instagram:hover span,
+.icons .instagram:hover .tooltip,
+.icons .instagram:hover .tooltip::before{
+    background: #e02b68;
+}
+
+.icons .envelope:hover span,
+.icons .envelope:hover .tooltip,
+.icons .envelope:hover .tooltip::before{
+    background: #b11b1b;
+}
+
+.icons .phone:hover span,
+.icons .phone:hover .tooltip,
+.icons .phone:hover .tooltip::before{
+    background: #08af08;
+}
+
+
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 1.5rem 2rem;
+    }
+}
+
+.back{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(Image/background1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    background: transparent;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #ff7200;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 50px;
+}
+
+.wrapper .form-box h2{
+    font-size: 3em;
+    color: #ff7200;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #000;
+    margin: 30px 0;
+}
+
+.wrapper .input-box label{
+    position: absolute;
+    top: 0;
+    left: 1%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: #ff7200;
+    font-weight: 700;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.wrapper .input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+    text-transform: lowercase;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.5em;
+    color: #fff;
+    line-height: 57px;
+}
+
+.remember-forgot{
+    font-size: 12px;
+    color: #fff;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input{
+    accent-color: #ff7200;
+    margin-right: 5px;
+}
+
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.gradient-btn {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: #fff;
+    background-image: linear-gradient(
+    to right,
+    #e26c0b 0%, 
+    #ff7300 51%, 
+    #e26c0b 100% 
+    );
+    border-radius: 10px;
+    background-size: 200% auto;
+    transition: .3s ease-in-out;
+    text-transform: uppercase;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.gradient-btn:hover{
+    background-position: right center;
+}
+
+@media (max-width:400px){
+    .remember-forgot{
+        font-size: 10px;
+    }
+}
+
+
+
