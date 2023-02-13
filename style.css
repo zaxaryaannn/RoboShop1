@@ -15,6 +15,7 @@
 html{
     font-size: 62.5%;
     width: 100%;
+    height: -webkit-fill-available;
     overflow-x: hidden;
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
@@ -39,7 +40,6 @@ html{
     width: 170px;
     height: 45px;
 }
-
 
 .icons{
     display: inline-flex;
@@ -162,7 +162,7 @@ html{
 
 .content{
     position: absolute;
-    top: 35%;
+    top: 25%;
     left: 7%;
     text-align: start;
 }
@@ -186,20 +186,29 @@ html{
     text-transform: none;
 }
 
-.content button{
-    font-size: 22px;
-    color: #fff;
-    background: #ff7200;
+.gradient-btn {
     width: 200px;
     height: 50px;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: #fff;
+    background-image: linear-gradient(
+    to right,
+    #e26c0b 0%, 
+    #ff7300 51%, 
+    #e26c0b 100% 
+    );
+    border-radius: 10px;
+    background-size: 200% auto;
+    transition: .3s ease-in-out;
+    text-transform: uppercase;
     margin-top: 40px;
     cursor: pointer;
-    border-radius: 8px;
-    box-shadow: 0 8px 5px -5px rgba(0, 0, 0, 0.2);
-    display: grid;
-    text-transform: none;
-    place-content: center;
-    transition: 0.2s;
+}
+
+.gradient-btn:hover{
+    background-position: right center;
 }
 
 #test{
@@ -212,7 +221,7 @@ html{
 /* Scroll Down */
 
 .back section {
-    height: 100vh;
+    height: 90vh;
     position: relative;
 }
 
@@ -258,11 +267,11 @@ a#scroll-btn:after {
     width: 12em;
     display: block;
     text-align: center;
-    left: -3.8em;
+    left: -4em;
     bottom: -3.9em;
     font-size: 1em;
     color: #ffffff;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     font-weight: 700;
 }
 
@@ -641,6 +650,9 @@ a#scroll-btn:after {
 }
  
 @media (max-width:1160px){
+    .content{
+        top: 30%
+    }
     .select-box{
         width: 210px;
     }
@@ -661,6 +673,9 @@ a#scroll-btn:after {
 }
 
 @media (max-width:1100px){
+    .content{
+        top: 30%;
+    }
     .container{
         margin-left: -30px;
     }
@@ -680,7 +695,7 @@ a#scroll-btn:after {
 
 @media (max-width:912px){
     .content{
-        top: 30%;
+        top: 35%;
         left: 5%;
     }
     .content h1{
@@ -700,18 +715,6 @@ a#scroll-btn:after {
     }
     #test{
         width: 350px;
-        font-size: 10px;
-    }
-    .intro{
-        height: 25px;
-        margin-top: 500px;
-    }
-    .intro .scroll-btn img{
-        width: 80px;
-        height: 80px;
-        transform: translate(21%, 0%);
-    }
-    .intro .scroll-btn h2{
         font-size: 10px;
     }
     .container{
@@ -774,19 +777,19 @@ a#scroll-btn:after {
 
 @media (max-width:640px){
     .content{
-        top: 35%;
+        top: 25%;
         left: 5%;
     }
     .content h1{
-        font-size: 2.2rem;
+        font-size: 2.1rem;
     }
     .content h1 span{
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
     .content p{
         font-size: 1.2rem;
     }
-    .content button{
+    .content .gradient-btn{
         font-size: 15px;
         width: 100px;
         height: 40px;
@@ -795,10 +798,6 @@ a#scroll-btn:after {
     #test{
         width: 300px;
         font-size: 10px;
-    }
-    .intro{
-        height: 25px;
-        margin-top: 470px;
     }
 }
 
@@ -815,18 +814,6 @@ a#scroll-btn:after {
 @media (max-width:480px){
     .header .logo a{
         font-size: 15px;
-    }
-    .intro{
-        height: 20px;
-        margin-top: 470px;
-    }
-    .intro .scroll-btn img{
-        width: 80px;
-        height: 80px;
-        transform: translate(5%, 0%);
-    }
-    .intro .scroll-btn h2{
-        font-size: 8px;
     }
 }
 
@@ -847,23 +834,8 @@ a#scroll-btn:after {
     }
 }
 
+
 @media (max-width:360px){
-    .content h1{
-        color: #fff;
-        font-size: 2.5rem;
-        margin-top: -35px;
-    }
-    
-    .content p{
-        font-size: 1.3rem;
-    }
-    
-    .content .button-btn{
-        font-size: 17px;
-        width: 100px;
-        height: 40px;
-        margin-top: 20px;
-    }
     .container{
         margin-left: -290px;
     }
@@ -875,7 +847,7 @@ a#scroll-btn:after {
     }
 }
 
-@media (max-width:320px){
+@media (max-width:324px){
     .container{
         margin-left: -300px;
     }
@@ -982,7 +954,7 @@ a#scroll-btn:after {
     .pagination ul li.btn{
         font-size: 11px;
         padding: 0 10px;
-        border-radius: 10%;
+        border-radius: 40%;
     }
     .pagination ul li.numb{
         height: 28px;
@@ -995,22 +967,13 @@ a#scroll-btn:after {
 }
 
 @media (max-width:420px){
-    .icons .icon span{
-        height: 30px;
-        width: 30px;
-    }
-    
-    .icons .icon span i{
-        font-size: 12px;
-        line-height: 30px;
-    }
     .pagination ul li{
         font-size: 16px;
     }
     .pagination ul li.btn{
         font-size: 11px;
         padding: 0 5px;
-        border-radius: 10%;
+        border-radius: 30%;
     }
     .pagination ul li.numb{
         height: 25px;
@@ -1029,7 +992,6 @@ a#scroll-btn:after {
     }
     .pagination ul li.btn{
         font-size: 7px;
-        border-radius: 10%;
     }
     .pagination ul li.numb{
         height: 25px;
@@ -1049,7 +1011,6 @@ a#scroll-btn:after {
     }
     .pagination ul li.btn{
         font-size: 7px;
-        border-radius: 10%;
     }
     .pagination ul li.numb{
         height: 24px;
