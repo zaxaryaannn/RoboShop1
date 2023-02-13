@@ -221,7 +221,7 @@ html{
 /* Scroll Down */
 
 .back section {
-    height: 90vh;
+    height: 100vh;
     position: relative;
 }
 
@@ -798,6 +798,10 @@ a#scroll-btn:after {
     #test{
         width: 300px;
         font-size: 10px;
+    }
+    .back section {
+        height: 85vh;
+        position: relative;
     }
 }
 
